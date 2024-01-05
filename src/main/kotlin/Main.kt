@@ -5,7 +5,7 @@ fun main() {
 
     val startTime = System.currentTimeMillis()
 
-    println("CiaO CoME STaI?".swapCase())
+    println("!ciaO CoME STaI?".title())
 
     val endTime = System.currentTimeMillis()
     val totalTime = endTime - startTime

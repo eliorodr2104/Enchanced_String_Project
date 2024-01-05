@@ -236,3 +236,20 @@ fun String.swapCase(): String {
         stringaCostruita.toString()
     }
 }
+
+fun String.capitalize(): String{
+    return this.replaceFirstChar { char -> char.uppercase() }
+}
+
+fun String.title(): String {
+    val stringaCostruita = StringBuilder(this)
+
+    for (i in this.indices)
+        if (this[i].isLetter()) {
+            if (this[i].isLowerCase())
+                stringaCostruita.setCharAt(i, this[i].uppercaseChar())
+            break
+        }
+
+    return stringaCostruita.toString()
+}
