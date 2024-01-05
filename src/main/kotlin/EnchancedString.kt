@@ -253,3 +253,9 @@ fun String.title(): String {
 
     return stringaCostruita.toString()
 }
+
+fun String.zFill(length: Int = this.length): String {
+    val character = "0"
+
+    return if (length > this.length) character.repeat(abs(length - this.length)) + this else this
+}
