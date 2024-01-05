@@ -1,10 +1,14 @@
 package com.serverCode
 
 fun main() {
+    //val prova = listOf("Eliomar", "Alejandro", "Fiumma")
 
-    val prova = "ciao lei ha un, nome, mi chiamo: {nome}, e ho {eta} anni."
+    val startTime = System.currentTimeMillis()
 
-    val map: HashMap<Any, Any> = hashMapOf("nome" to "Eliomar", "eta" to 19)
+    println("CiaO CoME STaI?".swapCase())
 
-    println(prova.formatMap(map))
+    val endTime = System.currentTimeMillis()
+    val totalTime = endTime - startTime
+
+    println("La tua funzione ha impiegato $totalTime millisecondi.")
 }
