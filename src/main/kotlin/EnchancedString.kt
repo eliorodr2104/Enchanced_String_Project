@@ -3,6 +3,12 @@ package com.serverCode
 import java.util.HashMap
 import kotlin.math.abs
 
+/**
+ * The text will be centered by adding a specified number of characters to the left and right, based on the given length.
+ * @param length Length of characters to add.
+ * @param character The character to add, by default, is the space.
+ * @return The text centered using the specified number and chosen characters
+ */
 fun String.center(length: Int, character: Char = ' '): String {
     var characterFinal = ""
 
@@ -12,6 +18,14 @@ fun String.center(length: Int, character: Char = ' '): String {
     return characterFinal + this + characterFinal
 }
 
+/**
+ * It counts the number of times the substring passed as a parameter appears within the main string, also allowing
+ * adjustment of the starting point and indices as parameters for the search.
+ * @param subString Substring to search within the main string.
+ * @param startIndex Starting index of the search, default is zero.
+ * @param endIndex Index where the search must end, default is the length of the main string.
+ * @return The number of times the text appears in the main string.
+ */
 fun String.count(subString: String, startIndex: Int = 0, endIndex: Int = this.length): Int{
     var count = 0
     var lastIndex = startIndex
@@ -29,6 +43,14 @@ fun String.count(subString: String, startIndex: Int = 0, endIndex: Int = this.le
     return count
 }
 
+/**
+ * Checks if the substring is at the end of the main string; it can also be adjusted by passing the start and end
+ * indices for the search.
+ * @param subString Substring to search within the main string.
+ * @param startIndex Starting index of the search, default is zero.
+ * @param endIndex Index where the search must end, default is the length - 1 of the main string.
+ * @return "True" if the text is at the end, otherwise returns "False".
+ */
 fun String.endsWith(subString: String, startIndex: Int = 0, endIndex: Int = this.length - 1, ignoreCase: Boolean = false): Boolean{
     val newStringOptionalValues = StringBuilder()
 
@@ -39,9 +61,13 @@ fun String.endsWith(subString: String, startIndex: Int = 0, endIndex: Int = this
         newStringOptionalValues.endsWith(subString, ignoreCase)
     }else
         false
-
 }
 
+/**
+ * When it detects a '\t' in the string, it is replaced with spaces; the number of spaces will match the quantity
+ * provided as a parameter.
+ * @param tabSize
+ */
 fun String.expandTabs(tabSize: Int): String {
     val result = StringBuilder()
     var column = 0
@@ -62,6 +88,19 @@ fun String.expandTabs(tabSize: Int): String {
 
     return result.toString()
 }
+
+
+
+/*
+fun String.expandTabs(tabSize: Int): String {
+    val spazziDaAggiungere = " ".repeat(tabSize - (this.length % tabSize))
+
+    return this.replace("\t", spazziDaAggiungere)
+}
+
+ */
+
+
 
 
 fun String.formatMap(map: HashMap<Any, Any>): String{

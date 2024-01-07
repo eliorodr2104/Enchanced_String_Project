@@ -1,14 +1,28 @@
 package com.serverCode
 
+import java.util.ArrayList
+
 fun main() {
     //val prova = listOf("Eliomar", "Alejandro", "Fiumma")
+    val prova = ArrayList<Long>()
 
-    val startTime = System.currentTimeMillis()
+    var media = 0L
 
-    println("Ciao".zFill(10))
+    for (i in 0 .. 10){
+        val startTime = System.currentTimeMillis()
 
-    val endTime = System.currentTimeMillis()
-    val totalTime = endTime - startTime
+        println("ciao\tCiao\tciao".expandTabs(10))
 
-    println("La tua funzione ha impiegato $totalTime millisecondi.")
+        val endTime = System.currentTimeMillis()
+        val totalTime = endTime - startTime
+
+        prova.add(totalTime)
+    }
+
+    for (i in prova)
+        media += i
+
+    media /= prova.size
+
+    println("La tua funzione ha impiegato $media millisecondi.")
 }
