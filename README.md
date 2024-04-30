@@ -1,54 +1,52 @@
 # Enhanced String
 
-## Introduction
-
-Enhanced String is a project aimed at enhancing the Kotlin `String` class by integrating methods and functionalities inspired by the Python language. 
-This expands the language capabilities and optimizes code.
+**Introduction**
+Enhanced String aims to enrich the functionality of the Kotlin `String` class by incorporating methods and features inspired by Python. This extension enhances the capabilities of the language and promotes code optimization.
 
 ## Added Methods
 
-The `String` class has been enriched with the following methods:
+Enhanced String introduces the following methods to the `String` class:
 
-- `center()`: the text will be centered by adding a specified number of characters to the left and right, based on the given length.
-- `count()`: it counts the number of times the substring passed as a parameter appears within the main string, also allowing adjustment of the starting point and indices as parameters for the search.
-- `endsWith()`: Checks if the substring is at the end of the main string; it can also be adjusted by passing the start and end indices for the search.
-- `expandTabs()`: When it detects a '\t' in the string, it is replaced with spaces; the number of spaces will match the quantity provided as a parameter.
-- `formatMap()`: joins an array of strings into a single string.
-- `strip()`: 
-- `isAlphaNum()`: 
-- `isAlpha()`: 
-- `isAscii()`: 
-- `isDecimal()`: 
-- `isDigit()`: 
-- `isIdentifier()`: 
-- `isLower()`: 
-- `isNumeric()`: 
-- `isPrintable()`:
-- `isSpace()`:
-- `isTitle()`:
-- `isUpper()`:
-- `join()`:
-- `lJust()`:
-- `lStrip()`:
-- `partition()`:
-- `rJust()`:
-- `rStrip()`:
-- `splitLines()`:
-- `startWith()`:
-- `sStrip()`:
-- `swapCase()`:
-- `capitalize()`:
-- `zFill()`:
+- `center()`: Centers the text within a specified length by adding characters to the left and right.
+- `count()`: Counts occurrences of a substring within the string, allowing customization of starting point and indices for the search.
+- `endsWith()`: Checks if the substring is at the end of the main string, with optional adjustment of search boundaries.
+- `expandTabs()`: Replaces '\t' characters with spaces, allowing customization of the number of spaces per tab.
+- `formatMap()`: Joins an array of strings into a single string.
+- `strip()`: Removes leading and trailing whitespace.
+- `isAlphaNum()`: Checks if the string is alphanumeric.
+- `isAlpha()`: Checks if the string is alphabetic.
+- `isAscii()`: Checks if the string contains only ASCII characters.
+- `isDecimal()`: Checks if the string is a decimal.
+- `isDigit()`: Checks if the string contains only digits.
+- `isIdentifier()`: Checks if the string is a valid identifier.
+- `isLower()`: Checks if the string is lowercase.
+- `isNumeric()`: Checks if the string is numeric.
+- `isPrintable()`: Checks if the string is printable.
+- `isSpace()`: Checks if the string contains only whitespace.
+- `isTitle()`: Checks if the string is titlecased.
+- `isUpper()`: Checks if the string is uppercase.
+- `join()`: Joins the elements of an iterable with the string as a separator.
+- `lJust()`: Left-justifies the string in a field of a given width.
+- `lStrip()`: Left-strips leading whitespace.
+- `partition()`: Splits the string into three parts using a separator.
+- `rJust()`: Right-justifies the string in a field of a given width.
+- `rStrip()`: Right-strips trailing whitespace.
+- `splitLines()`: Splits the string at line breaks.
+- `startWith()`: Checks if the string starts with a given prefix.
+- `sStrip()`: Strips leading and trailing whitespace.
+- `swapCase()`: Swaps case of alphabetic characters.
+- `capitalize()`: Capitalizes the first character of the string.
+- `zFill()`: Pads a numeric string with zeros.
 
 ## Improved Methods
 
-The following methods have been optimized for superior performance:
+Enhanced String optimizes the following method:
 
-- `capitalize()`: with faster execution time compared to the native Kotlin method.
+- `capitalize()`: Enhanced version with improved execution time compared to the native Kotlin method.
 
 ## Installation
 
-To integrate Enhanced String, add the following dependency to your project's `build.gradle` file:
+To integrate Enhanced String into your project, add the following dependency to your `build.gradle` file:
 
 ```gradle
 dependencies {
@@ -58,29 +56,24 @@ dependencies {
 
 ## Usage
 
-To use the added or improved methods of Enhanced String, you need to import the package com.github.[username].enhancedstring.
-For example, to use the replace() method, you'd write the following code:
+To use the added or improved methods of Enhanced String, import the package and utilize the methods as demonstrated below:
 
 ```kotlin
-import com.github.eliorodr2104.Enhanced_string_project.EnchancedStrings
-
 val string = "hello world!"
 
-val nuovaStringa = string.capitalize()
+val newString = string.capitalize()
 
-println(nuovaStringa) // Hello world!
+println(newString) // Hello world!
 ```
 
 ## Contributions
 
-Enhanced String is an open-source project, and contributions are welcome.
-To contribute, you can fork the GitHub repository and submit a pull request.
+Enhanced String is an open-source project, and contributions are encouraged. To contribute, fork the GitHub repository and submit a pull request.
 
 ## Notes
 
-- Enhanced String is still in development and might contain bugs.
+- Enhanced String is under active development and may contain bugs.
 - Enhanced String is compatible with Kotlin 1.6.0 or later versions.
 
-## Acknowledgments
-
-Thanks to all the developers who have contributed to the project.
+## License
+This project is licensed under the [MIT License](LICENSE).
